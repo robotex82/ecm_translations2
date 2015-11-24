@@ -27,7 +27,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'activeadmin'
   s.add_development_dependency 'sass-rails'
   s.add_development_dependency 'coffee-rails'
-  s.add_development_dependency 'localeapp'
   s.add_development_dependency 'route_translator'
 
   # Tests

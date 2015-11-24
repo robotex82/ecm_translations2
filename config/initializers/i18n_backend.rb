@@ -40,12 +40,12 @@ module I18n
           p e
           return {}
         end
-          t = {}
-          translations.each do |translation|
-            nested_key = expand_keys(translation.key).last
-            t.deep_merge! nested_key.split('.').reverse.inject(translation.value) { |a, n| { n => a } }
-          end
-          t
+        t = {}
+        translations.each do |translation|
+          nested_key = expand_keys(translation.key).last
+          t.deep_merge! nested_key.split('.').reverse.inject(translation.value) { |a, n| { n => a } }
+        end
+        t
       end
 
       class Translation < ::ActiveRecord::Base
