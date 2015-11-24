@@ -11,6 +11,7 @@ require 'sprockets/railtie'
 Bundler.require(*Rails.groups)
 require 'devise'
 require 'activeadmin'
+require 'rails-i18n'
 require 'route_translator'
 
 require 'ecm_translations2'

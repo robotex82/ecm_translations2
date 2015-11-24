@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = Ecm::Translations::VERSION
   s.authors     = ['Roberto Vasquez Angel']
   s.email       = ['roberto@vasquez-angel.de']
-  s.homepage    = 'https://github.com/robotex82/ecm_translations'
+  s.homepage    = 'https://github.com/robotex82/ecm_translations2'
   s.summary     = 'ECM Translations 2 Module.'
   s.description = 'Provides database storage and UI for I18n translations.'
 
@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'thin'
   s.add_development_dependency 'sqlite3'
   s.add_development_dependency 'jquery-rails'
+  s.add_development_dependency 'rails-i18n'
   s.add_development_dependency 'devise'
   s.add_development_dependency 'activeadmin'
   s.add_development_dependency 'sass-rails'

@@ -1,6 +1,7 @@
-class CreateEcmTranslationsTranslations < ActiveRecord::Migration
+# This migration comes from ecm_translations_engine (originally 1)
+class CreateTranslations < ActiveRecord::Migration
   def change
-    create_table :ecm_translations_translations do |t|
+    create_table :translations do |t|
       t.string :locale
       t.string :key
       t.text :value

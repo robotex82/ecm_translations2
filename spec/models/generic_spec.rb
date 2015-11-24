@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'ActiveRecord::Base models', type: :model do
-  ActiveRecord::Base.descendants.map(&:to_s).reject { |m| %w(ActiveAdmin::Comment AdminUser).include?(m) }.each do |model_name|
+  ActiveRecord::Base.descendants.map(&:to_s).reject { |m| %w(ActiveAdmin::Comment AdminUser I18n::Backend::ActiveRecord::Translation).include?(m) }.each do |model_name|
     model = model_name.constantize
     describe model do
       it 'should be an ActiveRecord::Base' do
