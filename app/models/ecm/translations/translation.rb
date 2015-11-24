@@ -1,6 +1,5 @@
 module Ecm::Translations
   class Translation < ActiveRecord::Base
-    self.table_name = 'translations'
 
     # validations
     validates :locale, presence: true
