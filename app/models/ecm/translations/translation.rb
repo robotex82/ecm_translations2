@@ -9,6 +9,10 @@ module Ecm::Translations
       I18n.reload!
     end
 
+    after_destroy do
+      I18n.reload!
+    end
+
     def human
       "#{self.class.model_name.human}: #{locale} | #{key}: #{value}"
     end
