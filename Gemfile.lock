@@ -8,7 +8,7 @@ GIT
 PATH
   remote: .
   specs:
-    ecm_translations2 (1.0.0)
+    ecm_translations2 (2.0.1)
       i18n-active_record
       rails
 

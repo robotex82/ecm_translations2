@@ -6,8 +6,10 @@ end
 
 if I18n::Backend::ActiveRecord::Translation.table_exists?
   backends = [I18n::Backend::ActiveRecord.new, I18n.backend]
-  # actual_backend   = I18n.backend
-  # database_backend = I18n::Backend::ActiveRecord.new
+  
+  I18n::Backend::ActiveRecord.send(:include, I18n::Backend::Memoize)
+  I18n::Backend::ActiveRecord.send(:include, I18n::Backend::Flatten)
+
   if Ecm::Translations::Configuration.prefer_database_translations
     I18n.backend = I18n::Backend::Chain.new(*backends)
   else
