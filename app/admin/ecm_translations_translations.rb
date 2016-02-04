@@ -52,4 +52,4 @@ ActiveAdmin.register Ecm::Translations::Translation do
     end
     active_admin_comments
   end
-end
+end if Gem::Specification.find_all_by_name('activeadmin').any?
