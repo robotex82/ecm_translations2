@@ -1,6 +1,5 @@
 module Ecm::Translations
   class Translation < ActiveRecord::Base
-
     # scopes
     scope :not_translated, -> { where(value: nil) }
     scope :is_proc, -> { where(is_proc: true) }

@@ -1,10 +1,10 @@
 module Ecm::Translations
   class ImportTranslationsService
-
     class TranslationInFileSystem
       attr_accessor :key, :locale, :raw_key, :value
       def initialize(raw_key, value)
-        @raw_key, @value = raw_key, value
+        @raw_key = raw_key
+        @value = value
       end
 
       def human
@@ -12,11 +12,11 @@ module Ecm::Translations
       end
 
       def key
-        @raw_key.split(".").drop(1).join(".")
+        @raw_key.split('.').drop(1).join('.')
       end
 
       def locale
-        @raw_key.split(".").first
+        @raw_key.split('.').first
       end
 
       def to_translation_attributes_hash
@@ -34,7 +34,7 @@ module Ecm::Translations
     end
 
     def initialize(options = {})
-      options.reverse_merge!({ translations: load_translations_from_backends })
+      options.reverse_merge!(translations: load_translations_from_backends)
       @source_translations = options[:translations]
     end
 
@@ -67,7 +67,7 @@ module Ecm::Translations
       end
 
       if I18n.backend.respond_to?(:backends)
-        return I18n.backend.backends.reject{ |backend| backend.class.name == 'I18n::Backend::ActiveRecord' }.collect do |backend|
+        return I18n.backend.backends.reject { |backend| backend.class.name == 'I18n::Backend::ActiveRecord' }.collect do |backend|
           backend.send(:init_translations) unless backend.initialized?
           backend.send(:translations)
         end.reduce({}, :merge)
@@ -80,11 +80,11 @@ module Ecm::Translations
     #   end.reduce({}, :merge)
     # end
 
-    def self.to_dotted_hash(hash, recursive_key = "")
+    def self.to_dotted_hash(hash, recursive_key = '')
       hash.each_with_object({}) do |(k, v), ret|
         key = recursive_key + k.to_s
         if v.is_a? Hash
-          ret.merge! to_dotted_hash(v, key + ".")
+          ret.merge! to_dotted_hash(v, key + '.')
         else
           ret[key] = v
         end
