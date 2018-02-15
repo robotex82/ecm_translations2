@@ -1,4 +1,4 @@
-class CreateEcmTranslationsTranslations < ActiveRecord::Migration
+class CreateEcmTranslationsTranslations < ActiveRecord::Migration[4.2]
   def change
     create_table :ecm_translations_translations do |t|
       t.string :locale
