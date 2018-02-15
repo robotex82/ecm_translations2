@@ -13,9 +13,6 @@ de:
       ecm/translations/translation:
         one: Übersetzung
         other: Übersetzungen
-  activeadmin:
-    menu:
-      ecm:
-       translations: Übersetzungen
   routes:
-    ecm_translations: uebersetzungen
+    ecm_translations_engine: uebersetzungen
+    # ecm_translations: uebersetzungen

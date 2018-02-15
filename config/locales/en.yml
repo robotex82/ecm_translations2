@@ -13,9 +13,6 @@ en:
       ecm/translations/translation:
         one: Translation
         other: Translations
-  activeadmin:
-    menu:
-      ecm:
-       translations: translations
   routes:
-    ecm_translations: translations
+    ecm_translations_engine: translations
+    # ecm_translations: translations
