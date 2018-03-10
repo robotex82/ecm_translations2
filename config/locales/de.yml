@@ -2,17 +2,17 @@ de:
   activerecord:
     attributes:
       ecm/translations/translation:
+        id: ID
         interpolations: Interpolationen
         is_proc: Ist eine Prozedur?
         key: Schlüssel
         locale: Sprache
         value: Wert
         created_at: Erstellt am
-        udpated_at: Aktualisiert am
+        updated_at: Aktualisiert am
     models:
       ecm/translations/translation:
         one: Übersetzung
         other: Übersetzungen
   routes:
     ecm_translations_engine: uebersetzungen
-    # ecm_translations: uebersetzungen
