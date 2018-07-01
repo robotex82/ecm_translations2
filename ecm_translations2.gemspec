@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.summary     = 'ECM Translations 2 Module.'
   s.description = 'Provides database storage and UI for I18n translations.'
 
-  s.files = Dir['{app,config,db,lib}/**/*', 'spec/factories/**/*'] + ['MIT-LICENSE', 'Rakefile', 'README.rdoc']
+  s.files = Dir['{app,config,db,lib,spec}/**/*', 'spec/factories/**/*'] + ['MIT-LICENSE', 'Rakefile', 'README.rdoc']
 
   s.add_dependency 'rails'
   s.add_dependency 'i18n-active_record'
